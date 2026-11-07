@@ -1,0 +1,12 @@
+{
+  "modo": "demo",
+  "advertencia": "Resultados DEMO sintéticos",
+  "procesador": "x86_64",
+  "ram_gb": "COMPLETAR SEGUN EQUIPO",
+  "sistema": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "semilla": 2026,
+  "repeticiones": 5,
+  "limite_s": 1.5,
+  "nota": "Solo mide algoritmos; carga de datos, inicialización de experimentos y gráficas excluidas"
+}

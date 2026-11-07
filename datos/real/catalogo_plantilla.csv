@@ -1,0 +1,41 @@
+id,nombre,municipio,categoria,latitud,longitud,visita_min,nodo_id,distancia_nodo_m,fuente,estado
+M01,Plaza principal de Armenia,Armenia,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M02,Plaza principal de Buenavista,Buenavista,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M03,Plaza principal de Calarcá,Calarcá,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M04,Plaza principal de Circasia,Circasia,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M05,Plaza principal de Córdoba,Córdoba,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M06,Plaza principal de Filandia,Filandia,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M07,Plaza principal de Génova,Génova,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M08,Plaza principal de La Tebaida,La Tebaida,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M09,Plaza principal de Montenegro,Montenegro,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M10,Plaza principal de Pijao,Pijao,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M11,Plaza principal de Quimbaya,Quimbaya,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+M12,Plaza principal de Salento,Salento,cabecera_municipal,,,,,,enunciado para municipios; verificar ubicación,PENDIENTE_COORDENADAS
+A01,Parque Nacional del Café,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
+A02,PANACA,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
+A03,Valle de Cocora,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
+A04,Jardín Botánico del Quindío,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
+A05,Museo del Oro Quimbaya,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
+A06,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A07,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A08,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A09,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A10,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A11,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A12,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A13,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A14,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+A15,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
+F01,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F02,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F03,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F04,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F05,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F06,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F07,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+F08,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
+C01,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
+C02,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
+C03,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
+C04,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
+C05,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE

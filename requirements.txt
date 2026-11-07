@@ -1,0 +1,13 @@
+# Recomendado: Python 3.11 o 3.12. OSMnx se necesita solo para la red REAL.
+osmnx>=2.0,<3
+networkx>=3.2,<4
+numpy>=1.26,<3
+scipy>=1.11,<3
+pandas>=2.2,<3
+pyproj>=3.6,<4
+shapely>=2,<3
+matplotlib>=3.8,<4
+folium>=0.15,<1
+streamlit>=1.40,<2
+streamlit-folium>=0.20,<1
+pytest>=8,<10

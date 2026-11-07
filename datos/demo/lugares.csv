@@ -1,0 +1,41 @@
+id,nombre,municipio,categoria,latitud,longitud,visita_min,nodo_id,distancia_nodo_m,fuente,estado
+M01,Armenia (DEMO),Armenia,cabecera_municipal,4.42,-75.83,0,1,0.0,SINTETICO/DEMO,demo
+M02,Buenavista (DEMO),Buenavista,cabecera_municipal,4.42,-75.81,0,2,0.0,SINTETICO/DEMO,demo
+M03,Calarcá (DEMO),Calarcá,cabecera_municipal,4.42,-75.78999999999999,0,3,0.0,SINTETICO/DEMO,demo
+M04,Circasia (DEMO),Circasia,cabecera_municipal,4.42,-75.77,0,4,0.0,SINTETICO/DEMO,demo
+M05,Córdoba (DEMO),Córdoba,cabecera_municipal,4.42,-75.75,0,5,0.0,SINTETICO/DEMO,demo
+M06,Filandia (DEMO),Filandia,cabecera_municipal,4.42,-75.73,0,6,0.0,SINTETICO/DEMO,demo
+M07,Génova (DEMO),Génova,cabecera_municipal,4.42,-75.69,0,8,0.0,SINTETICO/DEMO,demo
+M08,La Tebaida (DEMO),La Tebaida,cabecera_municipal,4.438,-75.83,0,9,0.0,SINTETICO/DEMO,demo
+M09,Montenegro (DEMO),Montenegro,cabecera_municipal,4.438,-75.81,0,10,0.0,SINTETICO/DEMO,demo
+M10,Pijao (DEMO),Pijao,cabecera_municipal,4.438,-75.78999999999999,0,11,0.0,SINTETICO/DEMO,demo
+M11,Quimbaya (DEMO),Quimbaya,cabecera_municipal,4.438,-75.77,0,12,0.0,SINTETICO/DEMO,demo
+M12,Salento (DEMO),Salento,cabecera_municipal,4.438,-75.75,0,13,0.0,SINTETICO/DEMO,demo
+A13,Atractivo Turistico 13 (DEMO),Armenia,atractivo_turistico,4.438,-75.71,45,15,0.0,SINTETICO/DEMO,demo
+A14,Atractivo Turistico 14 (DEMO),Buenavista,atractivo_turistico,4.438,-75.69,60,16,0.0,SINTETICO/DEMO,demo
+A15,Atractivo Turistico 15 (DEMO),Calarcá,atractivo_turistico,4.4559999999999995,-75.83,75,17,0.0,SINTETICO/DEMO,demo
+A16,Atractivo Turistico 16 (DEMO),Circasia,atractivo_turistico,4.4559999999999995,-75.81,90,18,0.0,SINTETICO/DEMO,demo
+A17,Atractivo Turistico 17 (DEMO),Córdoba,atractivo_turistico,4.4559999999999995,-75.78999999999999,45,19,0.0,SINTETICO/DEMO,demo
+A18,Atractivo Turistico 18 (DEMO),Filandia,atractivo_turistico,4.4559999999999995,-75.77,60,20,0.0,SINTETICO/DEMO,demo
+A19,Atractivo Turistico 19 (DEMO),Génova,atractivo_turistico,4.4559999999999995,-75.73,75,22,0.0,SINTETICO/DEMO,demo
+A20,Atractivo Turistico 20 (DEMO),La Tebaida,atractivo_turistico,4.4559999999999995,-75.71,90,23,0.0,SINTETICO/DEMO,demo
+A21,Atractivo Turistico 21 (DEMO),Montenegro,atractivo_turistico,4.4559999999999995,-75.69,45,24,0.0,SINTETICO/DEMO,demo
+A22,Atractivo Turistico 22 (DEMO),Pijao,atractivo_turistico,4.474,-75.83,60,25,0.0,SINTETICO/DEMO,demo
+A23,Atractivo Turistico 23 (DEMO),Quimbaya,atractivo_turistico,4.474,-75.81,75,26,0.0,SINTETICO/DEMO,demo
+A24,Atractivo Turistico 24 (DEMO),Salento,atractivo_turistico,4.474,-75.78999999999999,90,27,0.0,SINTETICO/DEMO,demo
+A25,Atractivo Turistico 25 (DEMO),Armenia,atractivo_turistico,4.474,-75.75,45,29,0.0,SINTETICO/DEMO,demo
+A26,Atractivo Turistico 26 (DEMO),Buenavista,atractivo_turistico,4.474,-75.73,60,30,0.0,SINTETICO/DEMO,demo
+A27,Atractivo Turistico 27 (DEMO),Calarcá,atractivo_turistico,4.474,-75.71,75,31,0.0,SINTETICO/DEMO,demo
+F28,Finca Hotel Rural 28 (DEMO),Circasia,finca_hotel_rural,4.474,-75.69,0,32,0.0,SINTETICO/DEMO,demo
+F29,Finca Hotel Rural 29 (DEMO),Córdoba,finca_hotel_rural,4.492,-75.83,0,33,0.0,SINTETICO/DEMO,demo
+F30,Finca Hotel Rural 30 (DEMO),Filandia,finca_hotel_rural,4.492,-75.81,0,34,0.0,SINTETICO/DEMO,demo
+F31,Finca Hotel Rural 31 (DEMO),Génova,finca_hotel_rural,4.492,-75.77,0,36,0.0,SINTETICO/DEMO,demo
+F32,Finca Hotel Rural 32 (DEMO),La Tebaida,finca_hotel_rural,4.492,-75.75,0,37,0.0,SINTETICO/DEMO,demo
+F33,Finca Hotel Rural 33 (DEMO),Montenegro,finca_hotel_rural,4.492,-75.73,0,38,0.0,SINTETICO/DEMO,demo
+F34,Finca Hotel Rural 34 (DEMO),Pijao,finca_hotel_rural,4.492,-75.71,0,39,0.0,SINTETICO/DEMO,demo
+F35,Finca Hotel Rural 35 (DEMO),Quimbaya,finca_hotel_rural,4.492,-75.69,0,40,0.0,SINTETICO/DEMO,demo
+C36,Acopio Trilladora 36 (DEMO),Salento,acopio_trilladora,4.51,-75.83,0,41,0.0,SINTETICO/DEMO,demo
+C37,Acopio Trilladora 37 (DEMO),Armenia,acopio_trilladora,4.51,-75.78999999999999,0,43,0.0,SINTETICO/DEMO,demo
+C38,Acopio Trilladora 38 (DEMO),Buenavista,acopio_trilladora,4.51,-75.77,0,44,0.0,SINTETICO/DEMO,demo
+C39,Acopio Trilladora 39 (DEMO),Calarcá,acopio_trilladora,4.51,-75.75,0,45,0.0,SINTETICO/DEMO,demo
+C40,Acopio Trilladora 40 (DEMO),Circasia,acopio_trilladora,4.51,-75.73,0,46,0.0,SINTETICO/DEMO,demo

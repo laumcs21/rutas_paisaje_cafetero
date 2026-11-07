@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.log
+.streamlit/secrets.toml
+# El GraphML real puede superar 100 MB; usar Git LFS o documentar descarga.
+datos/real/red.graphml
