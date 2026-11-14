@@ -1,0 +1,15 @@
+osm_id,nombre_osm,referencia,latitud,longitud,nodo_id,distancia_nodo_m,tipo_osm,fuente,estado
+610011228,Parque Nacional de la Cultura Agropecuaria - PANACA,PANACA,4.6072596,-75.81785316,7623861314,92.96,way,https://www.openstreetmap.org/way/610011228,CENTRO_GEOMETRICO_POR_VALIDAR
+1016991317,Reserva Natural Barbas Bremen,Reserva Barbas Bremen,4.68137894,-75.62263367,13141932644,567.02,way,https://www.openstreetmap.org/way/1016991317,CENTRO_GEOMETRICO_POR_VALIDAR
+296113221,Trilladora Colombia,Trilladora Colombia,4.53363811,-75.67779691,338992879,31.3,way,https://www.openstreetmap.org/way/296113221,CENTRO_GEOMETRICO_POR_VALIDAR
+302511718,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.51874826,-75.69044676,975335229,58.08,way,https://www.openstreetmap.org/way/302511718,CENTRO_GEOMETRICO_POR_VALIDAR
+318893062,Almacafé Armenia,Almacafe Armenia,4.51577647,-75.69057094,9703553794,119.36,way,https://www.openstreetmap.org/way/318893062,CENTRO_GEOMETRICO_POR_VALIDAR
+335522436,Trilladora Goncheverry,Trilladora Goncheverry,4.53378284,-75.68200041,2759670496,44.52,way,https://www.openstreetmap.org/way/335522436,CENTRO_GEOMETRICO_POR_VALIDAR
+335522438,Trilladora La Amelia,Trilladora La Amelia,4.53338894,-75.68070726,10045758744,23.23,way,https://www.openstreetmap.org/way/335522438,CENTRO_GEOMETRICO_POR_VALIDAR
+436483002,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.5656512,-75.75564694,6939884386,13.97,way,https://www.openstreetmap.org/way/436483002,CENTRO_GEOMETRICO_POR_VALIDAR
+440352500,Trilladora Europa,Trilladora Europa,4.51622618,-75.69222498,2098095581,41.61,way,https://www.openstreetmap.org/way/440352500,CENTRO_GEOMETRICO_POR_VALIDAR
+471991763,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.20482398,-75.79270486,4466303414,11.98,way,https://www.openstreetmap.org/way/471991763,CENTRO_GEOMETRICO_POR_VALIDAR
+507677601,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.5289164,-75.64355072,3003932814,30.5,way,https://www.openstreetmap.org/way/507677601,CENTRO_GEOMETRICO_POR_VALIDAR
+1315832516,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.62090169,-75.76672767,14059858558,34.51,way,https://www.openstreetmap.org/way/1315832516,CENTRO_GEOMETRICO_POR_VALIDAR
+1370764909,Cooperativa de Caficultores del Quindío,Cooperativa de Caficultores,4.62092764,-75.63380933,13764493977,14.53,way,https://www.openstreetmap.org/way/1370764909,CENTRO_GEOMETRICO_POR_VALIDAR
+1472557688,Centro de acopio,Centro de acopio,4.55281484,-75.66189244,672971633,199.96,way,https://www.openstreetmap.org/way/1472557688,CENTRO_GEOMETRICO_POR_VALIDAR

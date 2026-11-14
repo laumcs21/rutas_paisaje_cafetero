@@ -7,3 +7,10 @@ __pycache__/
 .streamlit/secrets.toml
 # El GraphML real puede superar 100 MB; usar Git LFS o documentar descarga.
 datos/real/red.graphml
+
+# Archivos OSM originales demasiado grandes para GitHub
+datos/real/quindio_completo.osm
+datos/real/vias_candidatas.osm
+
+# Caché temporal
+cache/

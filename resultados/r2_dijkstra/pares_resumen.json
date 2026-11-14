@@ -1,0 +1,21 @@
+{
+  "fecha": "2026-11-13T15:00:27.629006",
+  "grafo_nodos": 30981,
+  "grafo_aristas": 71353,
+  "implementacion": "rutas/dijkstra.py",
+  "repeticiones_previstas": 5,
+  "umbral_una_medicion_s": 60,
+  "limite_ejecucion_s": 300,
+  "pares_heap_esperados": 20,
+  "pares_lineal_esperados": 10,
+  "mediciones_completadas": 30,
+  "repeticiones_completadas": 150,
+  "pares_verificados": 10,
+  "errores": 0,
+  "cociente_mediana": 2700.0256847696887,
+  "cociente_minimo": 1138.7017140821274,
+  "cociente_maximo": 3009.2704666970594,
+  "unidad_tiempo_ejecucion": "ms",
+  "unidad_tiempo_viaje": "s",
+  "nota": "El tiempo de ejecución es la mediana de las repeticiones realizadas. La lectura del grafo y el catálogo no se incluye en las mediciones."
+}

@@ -57,29 +57,58 @@ def preparar_grafo_real(ruta_salida: str | Path, ruta_entrada: str | Path | None
 
 
 def medir_componentes_radios(lat: float, lon: float, salida_csv: str | Path) -> list[dict]:
-    """No incluye tiempo de descarga en la medición de SCC. Ejecutar con conexión a Internet."""
+    """Mide la SCC en cuatro radios y en la red candidata completa."""
     import osmnx as ox
-    ruta=Path(salida_csv)
-    ruta.parent.mkdir(parents=True,exist_ok=True)
-    radios=[2000,5000,10000,20000]
-    registros=[]
+
+    ruta = Path(salida_csv)
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+
+    radios = [2000, 5000, 10000, 20000]
+    registros = []
+
     for r in radios:
-        g=ox.graph.graph_from_point((lat,lon),dist=r,network_type='drive',retain_all=True)
-        medicion=medir(ox.truncate.largest_component,g,strongly=True)
-        g_fuerte=medicion.resultado
-        t=medicion.mediana_ms
-        registros.append({'red':f'Radio {r//1000} km','V':g.number_of_nodes(),'E':g.number_of_edges(),
-                          'V+E':g.number_of_nodes()+g.number_of_edges(),'tiempo_ms':round(t,6),
-                          'V_componente':g_fuerte.number_of_nodes(),'E_componente':g_fuerte.number_of_edges()})
-    g=ox.graph.graph_from_place('Quindío, Colombia',network_type='drive',retain_all=True)
-    medicion=medir(ox.truncate.largest_component,g,strongly=True)
-    gc=medicion.resultado
-    t=medicion.mediana_ms
-    registros.append({'red':'Departamento completo','V':g.number_of_nodes(),'E':g.number_of_edges(),
-                      'V+E':g.number_of_nodes()+g.number_of_edges(),'tiempo_ms':round(t,6),
-                      'V_componente':gc.number_of_nodes(),'E_componente':gc.number_of_edges()})
-    with open(ruta,'w',encoding='utf-8',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=registros[0].keys());w.writeheader();w.writerows(registros)
+        g = ox.graph.graph_from_point(
+            (lat, lon),
+            dist=r,
+            network_type='drive',
+            retain_all=True
+        )
+
+        medicion = medir(ox.truncate.largest_component, g, strongly=True)
+        g_fuerte = medicion.resultado
+
+        registros.append({
+            'red': f'Radio {r // 1000} km',
+            'V': g.number_of_nodes(),
+            'E': g.number_of_edges(),
+            'V+E': g.number_of_nodes() + g.number_of_edges(),
+            'tiempo_ms': round(medicion.mediana_ms, 6),
+            'V_componente': g_fuerte.number_of_nodes(),
+            'E_componente': g_fuerte.number_of_edges()
+        })
+
+    # Quinto caso: red candidata completa del Quindío
+    ruta_grafo = Path(__file__).resolve().parents[1] / 'datos/real/red_candidata.graphml'
+    g = ox.load_graphml(ruta_grafo)
+
+    medicion = medir(ox.truncate.largest_component, g, strongly=True)
+    gc = medicion.resultado
+
+    registros.append({
+        'red': 'Departamento completo',
+        'V': g.number_of_nodes(),
+        'E': g.number_of_edges(),
+        'V+E': g.number_of_nodes() + g.number_of_edges(),
+        'tiempo_ms': round(medicion.mediana_ms, 6),
+        'V_componente': gc.number_of_nodes(),
+        'E_componente': gc.number_of_edges()
+    })
+
+    with open(ruta, 'w', encoding='utf-8', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=registros[0].keys())
+        w.writeheader()
+        w.writerows(registros)
+
     return registros
 
 

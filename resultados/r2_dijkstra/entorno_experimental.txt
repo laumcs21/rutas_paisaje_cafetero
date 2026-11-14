@@ -1,0 +1,19 @@
+EQUIPO UTILIZADO EN EL REQUERIMIENTO 2
+Fecha: Sun Nov  8 13:59:42 -05 2026
+
+Procesador:
+Apple M5
+
+Memoria RAM:
+17179869184
+
+Sistema operativo:
+ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83
+
+Arquitectura:
+arm64
+
+Versión de Python:
+Python 3.11.18

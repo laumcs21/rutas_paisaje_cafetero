@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-11-13T14:58:21.505546",
+  "algoritmo": "Dijkstra con heap binario",
+  "grafo": "datos/real/red.graphml",
+  "nodos": 30981,
+  "aristas": 71353,
+  "lugares": 40,
+  "dimension_matriz": [
+    40,
+    40
+  ],
+  "unidad_matriz": "segundos",
+  "pares_inalcanzables": 0,
+  "pares_ordenados_asimetricos": 1546,
+  "tiempo_total_ms": 626.335419003226,
+  "tiempo_mediano_por_origen_ms": 15.618020999681903,
+  "tipo_medicion": "Ejecucion exploratoria de 40 origenes; no equivale a cinco repeticiones por experimento"
+}

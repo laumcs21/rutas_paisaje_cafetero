@@ -4,6 +4,7 @@ import json
 import math
 import pandas as pd
 import folium
+from folium.plugins import Fullscreen
 import streamlit as st
 from streamlit_folium import st_folium
 from rutas.datos import leer_lugares,leer_matriz
@@ -18,7 +19,7 @@ st.title('Rutas del Paisaje Cultural Cafetero')
 st.caption('Proyecto final — Análisis de Algoritmos | Red vial, Dijkstra, QuickHull y TSP')
 
 opciones=['demo']
-if all((BASE/'datos/real'/f).exists() for f in ('red.graphml','lugares.csv','matriz_tiempos.csv')):
+if all((BASE/'datos/real'/f).exists() for f in ('red.graphml','lugares.csv','matriz_tiempos_40x40.csv')):
     opciones.append('real')
 modo=st.sidebar.radio('Conjunto de datos',opciones,index=(len(opciones)-1))
 carpeta=BASE/'datos'/modo
@@ -43,7 +44,12 @@ def cargar_tiempos(ruta):
 try:
     g,adj=cargar_red(str(carpeta/'red.graphml'))
     lugares=cargar_catalogo(str(carpeta/'lugares.csv'))
-    matriz=cargar_tiempos(str(carpeta/'matriz_tiempos.csv'))
+    nombre_matriz = (
+        'matriz_tiempos_40x40.csv'
+        if modo == 'real'
+        else 'matriz_tiempos.csv'
+    )
+    matriz = cargar_tiempos(str(carpeta / nombre_matriz))
 except (FileNotFoundError,ValueError,ImportError) as err:
     st.error(f'No se pueden cargar los datos: {err}')
     st.stop()
@@ -57,7 +63,19 @@ def etiqueta(id_):return por_id[id_].etiqueta
 def mapa_base(center=None):
     if center is None:
         center=(sum(l.latitud for l in lugares)/len(lugares),sum(l.longitud for l in lugares)/len(lugares))
-    return folium.Map(location=center,zoom_start=11,tiles='OpenStreetMap',control_scale=True)
+    m = folium.Map(
+        location=center,
+        zoom_start=13,
+        tiles='OpenStreetMap',
+        control_scale=True,
+        scrollWheelZoom=True
+    )
+    Fullscreen(
+        position='topright',
+        title='Ampliar mapa',
+        title_cancel='Salir de pantalla completa'
+    ).add_to(m)
+    return m
 
 
 def dibujar_ruta(mapa,ruta,color='#1667D9',tooltip='Ruta'):
@@ -66,7 +84,13 @@ def dibujar_ruta(mapa,ruta,color='#1667D9',tooltip='Ruta'):
 
 
 def ver_mapa(mapa,clave):
-    st_folium(mapa,width=1000,height=490,returned_objects=[],key=clave)
+    st_folium(
+        mapa,
+        height=650,
+        use_container_width=True,
+        returned_objects=[],
+        key=clave
+    )
 
 pestañas=st.tabs(['Ruta más rápida','Envolvente convexa','Itinerario de un día','Experimentos y tablas','Acerca del proyecto'])
 
@@ -83,7 +107,25 @@ with pestañas[0]:
         dibujar_ruta(m,r.ruta)
         for punto,color in [(por_id[inicio],'green'),(por_id[fin],'red')]:
             folium.Marker([punto.latitud,punto.longitud],tooltip=punto.nombre,icon=folium.Icon(color=color)).add_to(m)
-        ver_mapa(m,'mapa-ruta')
+        puntos_ruta = coordenadas_ruta(g, r.ruta)
+        puntos_visibles = list(puntos_ruta) + [
+            (por_id[inicio].latitud, por_id[inicio].longitud),
+            (por_id[fin].latitud, por_id[fin].longitud)
+        ]
+
+        latitudes = [p[0] for p in puntos_visibles]
+        longitudes = [p[1] for p in puntos_visibles]
+
+        m.fit_bounds(
+            [
+                [min(latitudes), min(longitudes)],
+                [max(latitudes), max(longitudes)]
+            ],
+            padding=(40, 40),
+            max_zoom=16
+        )
+
+        ver_mapa(m, f'mapa-ruta-{modo}-{inicio}-{fin}')
     else:
         st.error('No existe camino entre los puntos seleccionados.')
 
@@ -147,27 +189,115 @@ with pestañas[2]:
     else:
         st.info('Debes seleccionar entre 6 y 8 atractivos para calcular los recorridos.')
 
+
 with pestañas[3]:
-    st.subheader('Tablas y gráficas del protocolo experimental')
-    res=BASE/'experimentos/resultados'
-    gra=BASE/'experimentos/graficas'
-    if not (res/'entorno.json').exists():
-        st.info('Ejecuta: python -m scripts.experimentos --modo demo (o --modo real)')
+    st.subheader("Tablas y gráficas del protocolo experimental")
+
+    r1 = BASE / "resultados/r1_componentes"
+    r2 = BASE / "resultados/r2_dijkstra"
+    res = BASE / "experimentos/resultados"
+    gra = BASE / "experimentos/graficas"
+
+    st.markdown("### R1 · Componentes fuertemente conexas")
+
+    archivo_r1 = r1 / "mediciones_radios.csv"
+    grafica_r1 = r1 / "tiempo_vs_tamano_red.png"
+
+    if archivo_r1.exists():
+        st.dataframe(
+            pd.read_csv(archivo_r1),
+            use_container_width=True,
+            hide_index=True
+        )
     else:
-        meta=json.loads((res/'entorno.json').read_text(encoding='utf-8'))
-        st.warning(f"Resultados generados con conjunto: {meta.get('modo','desconocido')} (puede ser diferente del seleccionado en la aplicación)")
-        for archivo,titulo in [('r1_componentes.csv','R1 · Componentes de la red'),('r2_dijkstra.csv','R2 · Dijkstra'),('r3_envolvente.csv','R3 · Envolvente'),
-                              ('r4_exactos.csv','R4 · Exactos'),('r4_calidad.csv','R4 · Calidad heurística'),
-                              ('r4_itinerario.csv','R4 · Itinerario')]:
-            f=res/archivo
-            if f.exists():
-                st.markdown(f'**{titulo}**')
-                st.dataframe(pd.read_csv(f),use_container_width=True,hide_index=True)
-        for f in sorted(gra.glob('*.png')):
-            st.image(str(f),caption=f.stem)
-        for f in (carpeta/'resumen_red.json',res/'r2_cocientes.json',res/'r4_itinerario_resumen.json'):
-            if f.exists():
-                with st.expander(f.stem):st.json(json.loads(f.read_text(encoding='utf-8')))
+        st.info("No se encontraron las mediciones de R1")
+
+    if grafica_r1.exists():
+        st.image(str(grafica_r1), caption="R1 · Tiempo frente al tamaño de la red")
+
+    st.divider()
+
+    st.markdown("### R2 · Caminos mínimos con Dijkstra")
+
+    archivos_r2 = [
+        ("pares_mediciones.csv", "Mediciones de los pares evaluados"),
+        ("pares_cocientes.csv", "Comparación de rendimiento: lineal / heap"),
+    ]
+
+    for nombre, titulo in archivos_r2:
+        archivo = r2 / nombre
+        if archivo.exists():
+            st.markdown(f"**{titulo}**")
+            st.dataframe(
+                pd.read_csv(archivo),
+                use_container_width=True,
+                hide_index=True
+            )
+
+    grafica_r2 = r2 / "pares_tiempo_vs_explorados.png"
+
+    if grafica_r2.exists():
+        st.image(
+            str(grafica_r2),
+            caption="R2 · Tiempo de ejecución frente a nodos explorados"
+        )
+
+    resumen_r2 = r2 / "pares_resumen.json"
+
+    if resumen_r2.exists():
+        with st.expander("Resumen de los experimentos de R2"):
+            st.json(json.loads(resumen_r2.read_text(encoding="utf-8")))
+
+    st.divider()
+
+    st.markdown("### R3 · Envolvente convexa")
+
+    archivo_r3 = res / "r3_envolvente.csv"
+    grafica_r3 = gra / "r3_envolvente.png"
+
+    if archivo_r3.exists():
+        st.dataframe(
+            pd.read_csv(archivo_r3),
+            use_container_width=True,
+            hide_index=True
+        )
+
+    if grafica_r3.exists():
+        st.image(str(grafica_r3), caption="R3 · Envolvente convexa")
+
+    st.divider()
+
+    st.markdown("### R4 · Optimización de itinerarios")
+
+    for nombre, titulo in [
+        ("r4_exactos.csv", "Algoritmos exactos"),
+        ("r4_calidad.csv", "Calidad de las heurísticas"),
+        ("r4_itinerario.csv", "Resultados de itinerarios"),
+    ]:
+        archivo = res / nombre
+        if archivo.exists():
+            st.markdown(f"**{titulo}**")
+            st.dataframe(
+                pd.read_csv(archivo),
+                use_container_width=True,
+                hide_index=True
+            )
+
+    grafica_r4 = gra / "r4_exactos.png"
+
+    if grafica_r4.exists():
+        st.image(str(grafica_r4), caption="R4 · Comparación de algoritmos exactos")
+
+    resumen_r4 = res / "r4_itinerario_resumen.json"
+
+    if resumen_r4.exists():
+        with st.expander("Resumen de itinerarios"):
+            st.json(json.loads(resumen_r4.read_text(encoding="utf-8")))
+
+    with st.expander("Información de la red vial"):
+        resumen_red = carpeta / "resumen_red.json"
+        if resumen_red.exists():
+            st.json(json.loads(resumen_red.read_text(encoding="utf-8")))
 
 with pestañas[4]:
     st.markdown('''**Proyecto final de Análisis de Algoritmos.** Implementaciones propias de

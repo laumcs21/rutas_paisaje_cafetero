@@ -1,0 +1,74 @@
+{
+  "grafo": "datos/real/red_candidata.graphml",
+  "centro": {
+    "latitud": 4.536307,
+    "longitud": -75.6723751
+  },
+  "proyeccion_metrica": "EPSG:32618",
+  "metodo_subgrafo": "Nodos dentro de distancia euclidiana proyectada",
+  "metodo_componente": "ox.truncate.largest_component(strongly=True)",
+  "repeticiones_previstas": 5,
+  "incluye_descarga_en_tiempo": false,
+  "resultados": [
+    {
+      "red": "Radio 2 km",
+      "V": 1909,
+      "E": 4116,
+      "V_mas_E": 6025,
+      "V_componente": 1784,
+      "E_componente": 3928,
+      "repeticiones": 5,
+      "mediana_ms": 15.226042,
+      "minimo_ms": 15.114208,
+      "maximo_ms": 15.774541
+    },
+    {
+      "red": "Radio 5 km",
+      "V": 6390,
+      "E": 14128,
+      "V_mas_E": 20518,
+      "V_componente": 6277,
+      "E_componente": 13998,
+      "repeticiones": 5,
+      "mediana_ms": 54.3575,
+      "minimo_ms": 53.581417,
+      "maximo_ms": 111.300084
+    },
+    {
+      "red": "Radio 10 km",
+      "V": 9239,
+      "E": 20297,
+      "V_mas_E": 29536,
+      "V_componente": 9103,
+      "E_componente": 20148,
+      "repeticiones": 5,
+      "mediana_ms": 78.383209,
+      "minimo_ms": 76.114875,
+      "maximo_ms": 144.79925
+    },
+    {
+      "red": "Radio 20 km",
+      "V": 15226,
+      "E": 33728,
+      "V_mas_E": 48954,
+      "V_componente": 14983,
+      "E_componente": 33423,
+      "repeticiones": 5,
+      "mediana_ms": 195.82825,
+      "minimo_ms": 133.818208,
+      "maximo_ms": 205.491417
+    },
+    {
+      "red": "Red candidata completa",
+      "V": 31828,
+      "E": 73014,
+      "V_mas_E": 104842,
+      "V_componente": 30981,
+      "E_componente": 71353,
+      "repeticiones": 5,
+      "mediana_ms": 359.144042,
+      "minimo_ms": 353.140125,
+      "maximo_ms": 429.098458
+    }
+  ]
+}

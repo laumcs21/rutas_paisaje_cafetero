@@ -1,0 +1,29 @@
+{
+  "fecha_procesamiento": "2026-11-07T14:42:34.870210",
+  "fuente": "OpenStreetMap - extracto BBBike",
+  "archivo_origen": "datos/real/red_candidata.graphml",
+  "nodos_antes_componente": 31828,
+  "aristas_antes_componente": 73014,
+  "nodos_componente": 30981,
+  "aristas_componente": 71353,
+  "tiempo_componente_ms": 344.31416701409034,
+  "velocidades_estimadas_kmh": {
+    "motorway": 80,
+    "motorway_link": 40,
+    "trunk": 70,
+    "trunk_link": 35,
+    "primary": 60,
+    "primary_link": 30,
+    "secondary": 50,
+    "secondary_link": 25,
+    "tertiary": 40,
+    "tertiary_link": 20,
+    "unclassified": 30,
+    "residential": 25,
+    "living_street": 10,
+    "service": 15,
+    "track": 15
+  },
+  "velocidad_fallback_kmh": 20,
+  "estado": "preliminar_pendiente_validacion"
+}

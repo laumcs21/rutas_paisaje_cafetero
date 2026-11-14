@@ -16,26 +16,26 @@ A02,PANACA,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y d
 A03,Valle de Cocora,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
 A04,Jardín Botánico del Quindío,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
 A05,Museo del Oro Quimbaya,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE
-A06,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A07,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A08,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A09,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A10,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A11,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A12,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A13,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A14,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-A15,PENDIENTE_ATRACTIVO_REAL,,atractivo_turistico,,,,,,,PENDIENTE
-F01,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F02,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F03,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F04,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F05,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F06,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F07,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-F08,PENDIENTE_FINCA_O_HOTEL_REAL,,finca_hotel_rural,,,,,,,PENDIENTE
-C01,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
-C02,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
-C03,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
-C04,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
-C05,PENDIENTE_ACOPIO_O_TRILLADORA_REAL,,acopio_trilladora,,,,,,,PENDIENTE
+A06,Parque de los Arrieros,Montenegro,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A07,RECUCA,Calarcá,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A08,Parque de la Vida,Armenia,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A09,Mirador Colina Iluminada,Filandia,atractivo_turistico,,,,,,https://cultura.quindio.gov.co/filandia,PENDIENTE_COORDENADAS
+A10,La Pequeña Granja de Mamá Lulú,Quimbaya,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A11,Centro Nacional para el Estudio del Bambú-Guadua,Córdoba,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A12,Reserva Natural Barbas Bremen,Filandia,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A13,Parque Nacional Natural Los Nevados - sector Quindío,Salento,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_COORDENADAS
+A14,Calle del Tiempo Detenido,Filandia,atractivo_turistico,,,,,,https://cultura.quindio.gov.co/filandia,PENDIENTE_COORDENADAS
+A15,Parroquia María Inmaculada,Filandia,atractivo_turistico,,,,,,https://cultura.quindio.gov.co/filandia,PENDIENTE_COORDENADAS
+F01,Finca El Ocaso,Salento,finca_hotel_rural,,,,,,https://web.fincaelocasosalento.com/hotel/,PENDIENTE_COORDENADAS
+F02,Finca La Morelia,Armenia,finca_hotel_rural,,,,,,https://cafelamorelia.com/,PENDIENTE_COORDENADAS
+F03,Finca Hotel La Dulcera,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_COORDENADAS
+F04,Hotel Hacienda Combia,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_COORDENADAS
+F05,Finca Hotel Veracruz,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_COORDENADAS
+F06,Finca Hotel El Descanso de Calarcá,Calarcá,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_COORDENADAS
+F07,Finca Cafetera El Balso,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_COORDENADAS
+F08,Finca Hotel La Huella,Montenegro,finca_hotel_rural,,,,,,https://observatorio.quindio.gov.co/images/fichas_basicas_municipales/Montenegro_FBM_2021.pdf,PENDIENTE_COORDENADAS
+C01,Punto de compra de café Armenia,Armenia,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_COORDENADAS
+C02,Punto de compra de café Calarcá,Calarcá,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_COORDENADAS
+C03,Punto de compra de café Quimbaya,Quimbaya,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_COORDENADAS
+C04,Punto de compra de café Filandia,Filandia,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_COORDENADAS
+C05,Punto de compra de café Génova,Génova,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_COORDENADAS

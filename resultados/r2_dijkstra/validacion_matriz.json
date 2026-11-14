@@ -1,0 +1,10 @@
+{
+  "fecha": "2026-11-13T14:59:18.214849",
+  "metodo": "Comparacion con NetworkX shortest_path_length",
+  "peso": "travel_time",
+  "unidad": "segundos",
+  "pares_validados": 10,
+  "coincidencias": 10,
+  "errores": 0,
+  "resultado": "APROBADO"
+}

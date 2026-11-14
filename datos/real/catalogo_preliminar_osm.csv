@@ -1,0 +1,41 @@
+id,nombre,municipio,categoria,latitud,longitud,visita_min,nodo_id,distancia_nodo_m,fuente,estado
+M01,Plaza principal de Armenia,Armenia,cabecera_municipal,4.53630700,-75.67237510,,672915632,70.00,https://www.openstreetmap.org/node/293168610,CENTRO_URBANO_NO_PLAZA
+M02,Plaza principal de Buenavista,Buenavista,cabecera_municipal,4.35991580,-75.73867790,,13003419885,19.48,https://www.openstreetmap.org/node/356656504,CENTRO_URBANO_NO_PLAZA
+M03,Plaza principal de Calarcá,Calarcá,cabecera_municipal,4.53058550,-75.64063200,,4464142096,48.63,https://www.openstreetmap.org/node/3206373774,CENTRO_URBANO_NO_PLAZA
+M04,Plaza principal de Circasia,Circasia,cabecera_municipal,4.62007460,-75.63475760,,1159189835,47.37,https://www.openstreetmap.org/node/703168438,CENTRO_URBANO_NO_PLAZA
+M05,Plaza principal de Córdoba,Córdoba,cabecera_municipal,4.39007150,-75.68582470,,3192289501,8.90,https://www.openstreetmap.org/node/703168421,CENTRO_URBANO_NO_PLAZA
+M06,Plaza principal de Filandia,Filandia,cabecera_municipal,4.67507670,-75.65799570,,1341833467,11.59,https://www.openstreetmap.org/node/703168451,CENTRO_URBANO_NO_PLAZA
+M07,Plaza principal de Génova,Génova,cabecera_municipal,4.20635890,-75.79045450,,4466303404,33.55,https://www.openstreetmap.org/node/703168324,CENTRO_URBANO_NO_PLAZA
+M08,Plaza principal de La Tebaida,La Tebaida,cabecera_municipal,4.45121750,-75.78873140,,2179284244,46.18,https://www.openstreetmap.org/node/703168432,CENTRO_URBANO_NO_PLAZA
+M09,Plaza principal de Montenegro,Montenegro,cabecera_municipal,4.56641760,-75.75070810,,960391884,28.30,https://www.openstreetmap.org/node/703168430,CENTRO_URBANO_NO_PLAZA
+M10,Plaza principal de Pijao,Pijao,cabecera_municipal,4.33414440,-75.70380620,,4818636827,34.43,https://www.openstreetmap.org/node/356657828,CENTRO_URBANO_NO_PLAZA
+M11,Plaza principal de Quimbaya,Quimbaya,cabecera_municipal,4.62245440,-75.76312820,,3989083911,50.06,https://www.openstreetmap.org/node/703168435,CENTRO_URBANO_NO_PLAZA
+M12,Plaza principal de Salento,Salento,cabecera_municipal,4.63730120,-75.56979900,,12984614208,45.82,https://www.openstreetmap.org/node/703168444,CENTRO_URBANO_NO_PLAZA
+A01,Parque Nacional del Café,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE_VERIFICACION_OSM
+A02,PANACA,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE_VERIFICACION_OSM
+A03,Valle de Cocora,,atractivo_turistico,,,,,,ejemplos del enunciado; verificar lugar y duración,PENDIENTE_VERIFICACION_OSM
+A04,Jardín Botánico del Quindío,,atractivo_turistico,4.51063199,-75.65138072,,4558650714,126.16,https://www.openstreetmap.org/way/203138769,CANDIDATO_OSM_NO_VALIDADO
+A05,Museo del Oro Quimbaya,,atractivo_turistico,4.57112553,-75.64805609,,3028779237,50.13,https://www.openstreetmap.org/way/295171104,CANDIDATO_OSM_NO_VALIDADO
+A06,Parque de los Arrieros,Montenegro,atractivo_turistico,4.57968280,-75.78105570,,4443172765,73.39,https://www.openstreetmap.org/node/4443172649,CANDIDATO_OSM_NO_VALIDADO
+A07,RECUCA,Calarcá,atractivo_turistico,4.43224880,-75.73321430,,2274612887,40.99,https://www.openstreetmap.org/node/4511384786,CANDIDATO_OSM_NO_VALIDADO
+A08,Parque de la Vida,Armenia,atractivo_turistico,4.54755291,-75.65962710,,293161293,96.45,https://www.openstreetmap.org/way/1528659509,CANDIDATO_OSM_NO_VALIDADO
+A09,Mirador Colina Iluminada,Filandia,atractivo_turistico,4.66895431,-75.66566225,,3051076746,112.17,https://www.openstreetmap.org/way/200000491,CANDIDATO_OSM_NO_VALIDADO
+A10,La Pequeña Granja de Mamá Lulú,Quimbaya,atractivo_turistico,4.60898030,-75.79020320,,7629240098,86.08,https://www.openstreetmap.org/node/8625692418,CANDIDATO_OSM_NO_VALIDADO
+A11,Centro Nacional para el Estudio del Bambú-Guadua,Córdoba,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_VERIFICACION_OSM
+A12,Reserva Natural Barbas Bremen,Filandia,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_VERIFICACION_OSM
+A13,Parque Nacional Natural Los Nevados - sector Quindío,Salento,atractivo_turistico,,,,,,https://www.quindio.gov.co/home/Cartilla_POMCA.compressed.pdf,PENDIENTE_VERIFICACION_OSM
+A14,Calle del Tiempo Detenido,Filandia,atractivo_turistico,4.67631695,-75.65861280,,2681634655,47.88,https://www.openstreetmap.org/way/313813773,CANDIDATO_OSM_NO_VALIDADO
+A15,Parroquia María Inmaculada,Filandia,atractivo_turistico,4.67498446,-75.65759576,,7087242280,33.80,https://www.openstreetmap.org/way/119411341,CANDIDATO_OSM_NO_VALIDADO
+F01,Finca El Ocaso,Salento,finca_hotel_rural,4.61899710,-75.60640470,,6583040813,63.92,https://www.openstreetmap.org/node/10031497317,CANDIDATO_OSM_NO_VALIDADO
+F02,Finca La Morelia,Armenia,finca_hotel_rural,4.46696411,-75.72082738,,5706109926,239.42,https://www.openstreetmap.org/way/599927818,CANDIDATO_OSM_NO_VALIDADO
+F03,Finca Hotel La Dulcera,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_VERIFICACION_OSM
+F04,Hotel Hacienda Combia,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_VERIFICACION_OSM
+F05,Finca Hotel Veracruz,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_VERIFICACION_OSM
+F06,Finca Hotel El Descanso de Calarcá,Calarcá,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_VERIFICACION_OSM
+F07,Finca Cafetera El Balso,,finca_hotel_rural,,,,,,https://www.quindio.gov.co/home/docs/items/item_149/Ind3_Turismo.pdf,PENDIENTE_VERIFICACION_OSM
+F08,Finca Hotel La Huella,Montenegro,finca_hotel_rural,,,,,,https://observatorio.quindio.gov.co/images/fichas_basicas_municipales/Montenegro_FBM_2021.pdf,PENDIENTE_VERIFICACION_OSM
+C01,Punto de compra de café Armenia,Armenia,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_VERIFICACION_OSM
+C02,Punto de compra de café Calarcá,Calarcá,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_VERIFICACION_OSM
+C03,Punto de compra de café Quimbaya,Quimbaya,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_VERIFICACION_OSM
+C04,Punto de compra de café Filandia,Filandia,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_VERIFICACION_OSM
+C05,Punto de compra de café Génova,Génova,acopio_trilladora,,,,,,https://federaciondecafeteros.org/wp-content/uploads/2026/02/92-Publicacio%CC%81n-compradores-autorizados-MECIC-01082024.pdf,PENDIENTE_VERIFICACION_OSM
