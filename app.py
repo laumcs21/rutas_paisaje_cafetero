@@ -225,7 +225,7 @@ with pestañas[3]:
     res = BASE / "experimentos/resultados" / modo
     gra = BASE / "experimentos/graficas" / modo
     if modo == "demo" and not res.exists():
-        # Compatibilidad con resultados DEMO incluidos en el ZIP original.
+
         res = BASE / "experimentos/resultados"
         gra = BASE / "experimentos/graficas"
     if modo == "real" and not (res / "entorno.json").exists():
@@ -337,14 +337,41 @@ with pestañas[3]:
         if resumen_red.exists():
             st.json(json.loads(resumen_red.read_text(encoding="utf-8")))
 
-with pestañas[4]:
-    st.markdown('''**Proyecto final de Análisis de Algoritmos.** Implementaciones propias de
-    Dijkstra lineal y con heap, QuickHull divide y vencerás, fuerza bruta, Held-Karp
-    (programación dinámica) y vecino más cercano (voraz). Las librerías proporcionan
-    mapas y procesamiento de datos, NO resuelven estos algoritmos.
 
-    **Importante:** el modo DEMO utiliza datos sintéticos. El modo REAL requiere los
-    archivos procesados de OpenStreetMap y la matriz de 40 lugares. Los tiempos de
-    desplazamiento son estimaciones, no información de tráfico en tiempo real.
-    ''')
-    st.write(f'Nodos: {g.number_of_nodes():,} | Aristas: {g.number_of_edges():,} | Lugares: {len(lugares)}')
+
+with pestañas[4]:
+    st.subheader("Acerca del proyecto")
+
+    st.write(
+        "Proyecto final de Análisis de Algoritmos de la Universidad "
+        "del Quindío. Se trabajó con una red vial obtenida de "
+        "OpenStreetMap para consultar caminos mínimos, calcular "
+        "envolventes convexas y organizar recorridos turísticos."
+    )
+
+    st.markdown("**Algoritmos implementados:**")
+    st.markdown(
+        "- Dijkstra lineal y con cola de prioridad\n"
+        "- QuickHull\n"
+        "- Fuerza bruta\n"
+        "- Held-Karp\n"
+        "- Vecino más cercano"
+    )
+
+    st.write(
+        "Se utilizaron herramientas como NetworkX, OSMnx, SciPy, "
+        "Streamlit y Folium para procesar los datos, comprobar "
+        "resultados y mostrar los recorridos."
+    )
+
+    st.info(
+        "Los tiempos de desplazamiento son estimaciones basadas "
+        "en la red vial procesada. No representan información "
+        "de tráfico en tiempo real."
+    )
+
+    st.write(
+        f"Nodos: {g.number_of_nodes():,} | "
+        f"Aristas: {g.number_of_edges():,} | "
+        f"Lugares: {len(lugares)}"
+    )

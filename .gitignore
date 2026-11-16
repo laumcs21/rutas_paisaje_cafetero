@@ -14,3 +14,10 @@ datos/real/vias_candidatas.osm
 
 # Caché temporal
 cache/
+
+.venv311/
+
+.venv/
+.venv311/
+__pycache__/
+.pytest_cache/
