@@ -1,0 +1,78 @@
+[
+  {
+    "conjunto": "Nodos de la red",
+    "n": 30980,
+    "repeticiones_propio_ms": [
+      62.325,
+      71.6547,
+      40.2769,
+      51.0553,
+      59.3027
+    ],
+    "repeticiones_scipy_ms": [
+      15.9599,
+      3.2477,
+      6.2135,
+      4.6902,
+      3.6116
+    ],
+    "vertices_coinciden": true
+  },
+  {
+    "conjunto": "Cuadrado, 1,000 puntos",
+    "n": 1000,
+    "repeticiones_propio_ms": [
+      1.2494,
+      1.1604,
+      1.8713,
+      1.2241,
+      1.7377
+    ],
+    "repeticiones_scipy_ms": [
+      1.0504,
+      0.8368,
+      0.8008,
+      0.7188,
+      0.7215
+    ],
+    "vertices_coinciden": true
+  },
+  {
+    "conjunto": "Cuadrado, 10,000 puntos",
+    "n": 10000,
+    "repeticiones_propio_ms": [
+      34.0317,
+      22.424,
+      22.8885,
+      20.9054,
+      21.6991
+    ],
+    "repeticiones_scipy_ms": [
+      2.0872,
+      3.0303,
+      2.2891,
+      1.5672,
+      1.4578
+    ],
+    "vertices_coinciden": true
+  },
+  {
+    "conjunto": "Cuadrado, 50,000 puntos",
+    "n": 50000,
+    "repeticiones_propio_ms": [
+      144.5086,
+      131.0177,
+      136.1433,
+      154.2704,
+      114.6619
+    ],
+    "repeticiones_scipy_ms": [
+      5.0718,
+      4.6821,
+      4.1572,
+      4.3058,
+      4.381
+    ],
+    "vertices_coinciden": true
+  }
+]

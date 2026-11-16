@@ -1,0 +1,10 @@
+orden,lugar_id,lugar,desplazamiento_min,visita_min,tiempo_acumulado_h
+Salida,M01,Plaza principal de Armenia,0.0,0.0,0.0
+1,A08,Parque de la Vida,4.13,60.0,1.069
+2,A05,Museo del Oro Quimbaya,5.5,90.0,2.661
+3,A13,Tour de Finca Don Elias,14.649,90.0,4.405
+4,A15,Parroquia María Inmaculada,30.151,30.0,5.407
+5,A14,Calle del Tiempo Detenido,0.541,30.0,5.916
+6,A09,Mirador Colina Iluminada,1.901,45.0,6.698
+7,A10,La Pequeña Granja de Mamá Lulú,25.707,120.0,9.126
+Regreso,M01,Plaza principal de Armenia,26.847,0.0,9.574

@@ -1,0 +1,14 @@
+{
+  "modo": "real",
+  "advertencia": "Datos reales del proyecto (red OSM y matriz calculada)",
+  "procesador": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "sistema_operativo": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9",
+  "semilla": 2026,
+  "repeticiones": 5,
+  "limite_s": 300.0,
+  "max_k": 12,
+  "definitivo": true,
+  "nota": "Mediciones del algoritmo; sin lectura, generación de entradas, escritura y gráficas",
+  "ram_gb": "COMPLETAR CON RAM DEL EQUIPO QUE EJECUTA"
+}

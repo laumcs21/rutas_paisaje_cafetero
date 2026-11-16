@@ -1,4 +1,4 @@
-"""Interfaz de demostración Streamlit. python -m streamlit run app.py"""
+"""Interfaz Streamlit para la red real del Quindío y un modo de demostración sintético."""
 from pathlib import Path
 import json
 import math
@@ -50,7 +50,7 @@ try:
         else 'matriz_tiempos.csv'
     )
     matriz = cargar_tiempos(str(carpeta / nombre_matriz))
-except (FileNotFoundError,ValueError,ImportError) as err:
+except (FileNotFoundError, ValueError, ImportError, RuntimeError) as err:
     st.error(f'No se pueden cargar los datos: {err}')
     st.stop()
 por_id={l.id:l for l in lugares}
@@ -134,38 +134,61 @@ with pestañas[1]:
     geo=carpeta/'envolvente.geojson'
     if geo.exists():
         m=mapa_base()
-        folium.GeoJson(json.loads(geo.read_text(encoding='utf-8')),
-                       style_function=lambda _: {'color':'#7C3AED','weight':3,'fillOpacity':.12}).add_to(m)
+        capa_hull=folium.GeoJson(
+            json.loads(geo.read_text(encoding='utf-8')),
+            style_function=lambda _: {'color':'#7C3AED','weight':3,'fillOpacity':.12}
+        ).add_to(m)
+        m.fit_bounds(capa_hull.get_bounds(),padding=(30,30))
         for l in lugares:
             folium.CircleMarker([l.latitud,l.longitud],radius=2,color='#164E63',fill=True).add_to(m)
-        ver_mapa(m,'mapa-hull')
+        ver_mapa(m,f'mapa-hull-{modo}')
         st.caption('La envolvente corresponde a los nodos viales, no al contorno administrativo del departamento.')
     else:
-        st.warning('Primero ejecuta generar_resultados_reales.py para calcular la envolvente.')
+        st.warning('No se encontró la envolvente de este modo. Para el modo real ejecuta: python -m scripts.experimentos_r3_r4 --parte r3 --modo real')
 
 with pestañas[2]:
     st.subheader('Recorrido por atractivos: Held-Karp vs vecino más cercano')
-    punto=st.selectbox('Lugar de salida/llegada',ids,format_func=etiqueta,key='tsp_inicio')
+    punto=st.selectbox('Lugar de salida/llegada',ids,
+                       index=ids.index('M01') if 'M01' in ids else 0,
+                       format_func=etiqueta,key='tsp_inicio')
     opciones_atr=[l.id for l in lugares if l.categoria=='atractivo_turistico' and l.id!=punto]
+    # En modo REAL iniciar con el itinerario de 6-8 atractivos ya validado
+    # experimentalmente; permite modificar cualquier selección manualmente.
+    seleccion_inicial = opciones_atr[:6]
+    resumen_itinerario = BASE / 'experimentos/resultados' / modo / 'r4_itinerario_resumen.json'
+    if resumen_itinerario.exists():
+        try:
+            previo = json.loads(resumen_itinerario.read_text(encoding='utf-8'))
+            if previo.get('inicio') == punto:
+                candidatos = [i for i in previo.get('destinos_finales', []) if i in opciones_atr]
+                if 6 <= len(candidatos) <= 8:
+                    seleccion_inicial = candidatos
+        except (ValueError, OSError):
+            pass
     visitados=st.multiselect('Selecciona entre 6 y 8 atractivos',opciones_atr,
-        default=opciones_atr[:6],format_func=etiqueta,max_selections=8)
+        default=seleccion_inicial,format_func=etiqueta,max_selections=8)
     if 6<=len(visitados)<=8:
         opt=tsp_held_karp(matriz,punto,visitados)
         vor=tsp_vecino_cercano(matriz,punto,visitados)
         visitas={l.id:l.visita_min for l in lugares}
         total=duracion_itinerario(matriz,opt.ruta,visitas)
+        total_voraz=duracion_itinerario(matriz,vor.ruta,visitas)
         a,b,c=st.columns(3)
-        a.metric('Held-Karp (viaje)',f'{opt.costo/60:.1f} min')
-        b.metric('Vecino cercano (viaje)',f'{vor.costo/60:.1f} min')
-        c.metric('Diferencia de la heurística',f'{brecha_porcentaje(vor.costo,opt.costo):.2f} %')
+        a.metric('Held-Karp (desplazamiento)',f'{opt.costo/60:.1f} min')
+        b.metric('Vecino cercano (desplazamiento)',f'{vor.costo/60:.1f} min')
+        c.metric('Brecha del tiempo de viaje',f'{brecha_porcentaje(vor.costo,opt.costo):.2f} %')
+        a,b=st.columns(2)
+        a.metric('Jornada total Held-Karp',f'{total["total_s"]/3600:.2f} h')
+        b.metric('Jornada total vecino cercano',f'{total_voraz["total_s"]/3600:.2f} h')
         st.write('**Ruta óptima:**',' → '.join(por_id[x].nombre for x in opt.ruta))
         st.write('**Ruta voraz:**',' → '.join(por_id[x].nombre for x in vor.ruta))
         st.write(f"**Jornada óptima:** {total['viaje_s']/3600:.2f} h de desplazamiento + "
                  f"{total['visitas_s']/3600:.2f} h de visitas = **{total['total_s']/3600:.2f} h**")
         if total['cabe']:
-            st.success('El itinerario cabe en una jornada de 11 horas.')
+            st.success('El itinerario óptimo cabe en una jornada de 11 horas.')
         else:
-            st.warning('No cabe en 11 horas. Reduce lugares o sus duraciones justificadamente y recalcula.')
+            st.warning('El itinerario óptimo no cabe en 11 horas. Ajusta los destinos y recalcula.')
+        st.caption('Las duraciones de visita son las mismas en ambos órdenes; la diferencia de jornada se debe al desplazamiento. No se incluye tráfico en tiempo real ni horarios de apertura.')
         tabla=[];acum=0
         for i,lid in enumerate(opt.ruta):
             mov=(matriz[opt.ruta[i-1]][lid]/60 if i else 0)
@@ -184,8 +207,11 @@ with pestañas[2]:
             l=por_id[n]
             folium.Marker([l.latitud,l.longitud],tooltip=l.nombre,
                           icon=folium.Icon(color='green' if n==punto else 'blue')).add_to(m)
+        puntos_visita=[(por_id[i].latitud,por_id[i].longitud) for i in [punto,*visitados]]
+        m.fit_bounds([[min(p[0] for p in puntos_visita),min(p[1] for p in puntos_visita)],
+                      [max(p[0] for p in puntos_visita),max(p[1] for p in puntos_visita)]],padding=(35,35))
         st.caption('Azul = recorrido Held-Karp; naranja = heurística. Las líneas pueden superponerse.')
-        ver_mapa(m,'mapa-itinerario')
+        ver_mapa(m,f'mapa-itinerario-{modo}-{punto}')
     else:
         st.info('Debes seleccionar entre 6 y 8 atractivos para calcular los recorridos.')
 
@@ -195,9 +221,17 @@ with pestañas[3]:
 
     r1 = BASE / "resultados/r1_componentes"
     r2 = BASE / "resultados/r2_dijkstra"
-    res = BASE / "experimentos/resultados"
-    gra = BASE / "experimentos/graficas"
+    # No mezclar resultados sintéticos con los obtenidos sobre la red real.
+    res = BASE / "experimentos/resultados" / modo
+    gra = BASE / "experimentos/graficas" / modo
+    if modo == "demo" and not res.exists():
+        # Compatibilidad con resultados DEMO incluidos en el ZIP original.
+        res = BASE / "experimentos/resultados"
+        gra = BASE / "experimentos/graficas"
+    if modo == "real" and not (res / "entorno.json").exists():
+        st.info("R3/R4 aún no tienen mediciones reales. Ejecuta python -m scripts.experimentos_r3_r4 --modo real")
 
+    st.caption('R1 y R2: resultados experimentales guardados sobre la red REAL del Quindío. R3 y R4: resultados del modo seleccionado.')
     st.markdown("### R1 · Componentes fuertemente conexas")
 
     archivo_r1 = r1 / "mediciones_radios.csv"
@@ -264,6 +298,8 @@ with pestañas[3]:
 
     if grafica_r3.exists():
         st.image(str(grafica_r3), caption="R3 · Envolvente convexa")
+    if not archivo_r3.exists() or not grafica_r3.exists():
+        st.info("Faltan resultados de R3 para este modo; comprueba la carpeta de experimentos.")
 
     st.divider()
 
@@ -287,6 +323,8 @@ with pestañas[3]:
 
     if grafica_r4.exists():
         st.image(str(grafica_r4), caption="R4 · Comparación de algoritmos exactos")
+    if not (res / "r4_exactos.csv").exists() or not grafica_r4.exists():
+        st.info("Faltan resultados de R4 para este modo; comprueba la carpeta de experimentos.")
 
     resumen_r4 = res / "r4_itinerario_resumen.json"
 
@@ -305,8 +343,8 @@ with pestañas[4]:
     (programación dinámica) y vecino más cercano (voraz). Las librerías proporcionan
     mapas y procesamiento de datos, NO resuelven estos algoritmos.
 
-    **Importante:** el modo DEMO es sintético. Para obtener resultados académicos de la
-    red real hay que descargar OpenStreetMap, verificar un catálogo auténtico de al menos
-    40 lugares, ejecutar los experimentos en el mismo equipo y completar el documento técnico.
+    **Importante:** el modo DEMO utiliza datos sintéticos. El modo REAL requiere los
+    archivos procesados de OpenStreetMap y la matriz de 40 lugares. Los tiempos de
+    desplazamiento son estimaciones, no información de tráfico en tiempo real.
     ''')
     st.write(f'Nodos: {g.number_of_nodes():,} | Aristas: {g.number_of_edges():,} | Lugares: {len(lugares)}')

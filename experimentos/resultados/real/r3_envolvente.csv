@@ -1,0 +1,5 @@
+conjunto,n,vertices,tiempo_propio_ms,tiempo_scipy_ms,cociente,verificacion
+Nodos de la red,30980,14,59.3027,4.6902,12.64396,OK
+"Cuadrado, 1,000 puntos",1000,21,1.2494,0.8008,1.56019,OK
+"Cuadrado, 10,000 puntos",10000,28,22.424,2.0872,10.74358,OK
+"Cuadrado, 50,000 puntos",50000,32,136.1433,4.381,31.07585,OK

@@ -1,0 +1,48 @@
+{
+  "inicio": "M01",
+  "criterio_inicial": "Ocho atractivos con menor duración de visita; empate por identificador",
+  "destinos_iniciales": [
+    "A14",
+    "A15",
+    "A09",
+    "A08",
+    "A05",
+    "A11",
+    "A13",
+    "A10"
+  ],
+  "destinos_finales": [
+    "A14",
+    "A15",
+    "A09",
+    "A08",
+    "A05",
+    "A13",
+    "A10"
+  ],
+  "ruta": [
+    "M01",
+    "A08",
+    "A05",
+    "A13",
+    "A15",
+    "A14",
+    "A09",
+    "A10",
+    "M01"
+  ],
+  "retirados": [
+    {
+      "lugar_id": "A11",
+      "visita_min": 90.0,
+      "motivo": "Mayor reducción de la jornada tras recalcular Held-Karp",
+      "ahorro_total_min": 138.563,
+      "jornada_anterior_h": 11.883,
+      "jornada_restante_h": 9.574
+    }
+  ],
+  "total_visitas_min": 465.0,
+  "total_desplazamientos_min": 109.427,
+  "total_jornada_h": 9.5738,
+  "cabe_11h": true
+}

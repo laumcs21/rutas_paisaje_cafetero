@@ -1,0 +1,332 @@
+[
+  {
+    "k": 5,
+    "origen": "M01",
+    "destinos": [
+      "A01",
+      "A11",
+      "A13",
+      "A07",
+      "F04"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "F04",
+      "A01",
+      "A07",
+      "A11",
+      "A13",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      0.1434,
+      0.105,
+      0.099,
+      0.0973,
+      0.0943
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      0.1263,
+      0.1171,
+      0.1193,
+      0.1169,
+      0.1177
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 6,
+    "origen": "M01",
+    "destinos": [
+      "M04",
+      "C04",
+      "F04",
+      "M09",
+      "C03",
+      "A04"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "F04",
+      "M09",
+      "C03",
+      "C04",
+      "M04",
+      "A04",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      0.3827,
+      0.2613,
+      0.2556,
+      0.2531,
+      0.2899
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      0.691,
+      0.684,
+      0.685,
+      0.6871,
+      0.771
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 7,
+    "origen": "M01",
+    "destinos": [
+      "F01",
+      "M10",
+      "M08",
+      "A15",
+      "A02",
+      "C05",
+      "A13"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "M10",
+      "C05",
+      "M08",
+      "A02",
+      "A15",
+      "A13",
+      "F01",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      0.7067,
+      0.6435,
+      0.6584,
+      0.6431,
+      0.6647
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      5.1679,
+      5.3445,
+      5.0503,
+      5.2092,
+      5.0262
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 8,
+    "origen": "M01",
+    "destinos": [
+      "M06",
+      "A13",
+      "C04",
+      "F08",
+      "M05",
+      "M09",
+      "A09",
+      "M03"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "M05",
+      "M03",
+      "A13",
+      "C04",
+      "M06",
+      "A09",
+      "F08",
+      "M09",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      1.8815,
+      1.6971,
+      1.6158,
+      1.6316,
+      1.9906
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      44.4743,
+      44.0735,
+      43.7274,
+      43.8255,
+      45.634
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 9,
+    "origen": "M01",
+    "destinos": [
+      "A09",
+      "M12",
+      "M06",
+      "M04",
+      "F06",
+      "C05",
+      "M08",
+      "A13",
+      "F02"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "C05",
+      "F02",
+      "M08",
+      "F06",
+      "A09",
+      "M06",
+      "M12",
+      "A13",
+      "M04",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      4.7309,
+      4.2315,
+      4.1683,
+      4.0945,
+      4.2619
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      436.8964,
+      437.9547,
+      431.9035,
+      437.3286,
+      430.3715
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 10,
+    "origen": "M01",
+    "destinos": [
+      "M05",
+      "C03",
+      "F01",
+      "M02",
+      "M10",
+      "M03",
+      "A15",
+      "A14",
+      "F04",
+      "M04"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "F04",
+      "C03",
+      "A14",
+      "A15",
+      "M04",
+      "F01",
+      "M03",
+      "M05",
+      "M10",
+      "M02",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      10.4307,
+      10.3917,
+      10.0299,
+      9.7034,
+      9.8043
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      4549.0203,
+      4555.524,
+      4537.3607,
+      4636.1745,
+      4554.7756
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 11,
+    "origen": "M01",
+    "destinos": [
+      "A06",
+      "C02",
+      "M05",
+      "A09",
+      "F04",
+      "M10",
+      "M04",
+      "A14",
+      "C03",
+      "F03",
+      "F08"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "F03",
+      "F04",
+      "A06",
+      "F08",
+      "C03",
+      "A09",
+      "A14",
+      "M04",
+      "C02",
+      "M05",
+      "M10",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      38.6638,
+      23.7569,
+      25.324,
+      24.017,
+      24.1529
+    ],
+    "repeticiones_fuerza_bruta_ms": [
+      52240.5369,
+      52479.4095,
+      52482.2539,
+      52735.9367,
+      65722.6329
+    ],
+    "fuerza_bruta_completada": true
+  },
+  {
+    "k": 12,
+    "origen": "M01",
+    "destinos": [
+      "M07",
+      "F05",
+      "M06",
+      "M08",
+      "C01",
+      "M02",
+      "A04",
+      "M12",
+      "A01",
+      "M03",
+      "M11",
+      "M05"
+    ],
+    "ruta_held_karp": [
+      "M01",
+      "M03",
+      "A04",
+      "M12",
+      "M06",
+      "M11",
+      "A01",
+      "F05",
+      "M08",
+      "M07",
+      "M02",
+      "M05",
+      "C01",
+      "M01"
+    ],
+    "repeticiones_held_karp_ms": [
+      79.2657,
+      93.6781,
+      61.1473,
+      62.9756,
+      77.3778
+    ],
+    "repeticiones_fuerza_bruta_ms": [],
+    "fuerza_bruta_completada": false
+  }
+]
