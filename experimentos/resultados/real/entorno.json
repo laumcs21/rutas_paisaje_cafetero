@@ -10,5 +10,5 @@
   "max_k": 12,
   "definitivo": true,
   "nota": "Mediciones del algoritmo; sin lectura, generación de entradas, escritura y gráficas",
-  "ram_gb": "COMPLETAR CON RAM DEL EQUIPO QUE EJECUTA"
+  "ram_gb": 15.71
 }
